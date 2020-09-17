@@ -2,7 +2,7 @@
 
 Le but est de développer une interface permettant de rechercher des films et d'en afficher les informations.
 
-Le style de l'interface est libre. La librairie Material UI est installée de base mais peut ne pas être utilisée.
+Le choix des éléments UI et du style de l'interface est libre. La librairie Material UI est installée de base mais peut ne pas être utilisée.
 
 ## Fonctionalitées
 
@@ -10,7 +10,7 @@ Le style de l'interface est libre. La librairie Material UI est installée de ba
 * la liste des résultats contient pour chaque film les informations suivantes :
     * le titre ("Title")
     * l'année ("Year)
-* au clic sur un film on affiche les détails suivant :
+* au clic sur un film on affiche les détails suivant (dans une pop-in ou une nouvelle page) :
     * le réalisateur ("Director")
     * l'intrigue ("Plot")
     * l'affiche ("Poster")
@@ -18,6 +18,7 @@ Le style de l'interface est libre. La librairie Material UI est installée de ba
 Bonus :
 * ajouter une fonctionnalité de tri des résultats
 * ajouter une pagination
+* ajouter des tests unitaires
 
 ## API
 

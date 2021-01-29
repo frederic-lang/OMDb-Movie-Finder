@@ -19,6 +19,7 @@ Bonus :
 * ajouter une fonctionnalité de tri des résultats
 * ajouter une pagination
 * ajouter des tests unitaires
+* utiliser Redux
 
 ## API
 

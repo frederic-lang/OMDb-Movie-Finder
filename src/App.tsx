@@ -4,15 +4,22 @@ import Footer from "./components/Footer"
 import Hero from './components/Hero'
 import MovieGrid from './components/MovieGrid';
 
-import { ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import { ThemeProvider, Theme, StyledEngineProvider, createTheme } from '@material-ui/core/styles';
 
-const theme = createMuiTheme();
+
+declare module '@material-ui/styles/defaultTheme' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends Theme {}
+}
+
+
+const theme = createTheme();
 
 
 
 const App = () => {
-  return (
-    <>
+  return <>
+      <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
       <header>
         <FreeAppBar />
@@ -23,8 +30,8 @@ const App = () => {
       </main>
       <Footer />
       </ThemeProvider>
-    </>
-  )
+      </StyledEngineProvider>
+  </>;
 }
 
 export default App

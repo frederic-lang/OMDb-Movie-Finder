@@ -4,10 +4,16 @@ import Footer from "./components/Footer"
 import Hero from './components/Hero'
 import MovieGrid from './components/MovieGrid';
 
-const App = () => {
+import { ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 
+const theme = createMuiTheme();
+
+
+
+const App = () => {
   return (
     <>
+        <ThemeProvider theme={theme}>
       <header>
         <FreeAppBar />
       </header>
@@ -16,6 +22,7 @@ const App = () => {
           <MovieGrid />
       </main>
       <Footer />
+      </ThemeProvider>
     </>
   )
 }

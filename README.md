@@ -8,29 +8,29 @@ Le choix des éléments UI et du style de l'interface est libre. La librairie Ma
 
 * un champ permet de rechercher des films par titre 
 * la liste des résultats contient pour chaque film les informations suivantes :
-    [x] le titre ("Title")
-    [x] l'année ("Year)
+  -[x] le titre ("Title")
+  -[x] l'année ("Year)
 * au clic sur un film on affiche les détails suivant (dans une pop-in ou une nouvelle page) :
-    [x] le réalisateur ("Director")
-    [x] l'intrigue ("Plot")
-    [x] l'affiche ("Poster")
+  -[x] le réalisateur ("Director")
+  -[x] l'intrigue ("Plot")
+  -[x] l'affiche ("Poster")
 
 Bonus :
-[x] ajouter une fonctionnalité de tri des résultats
-[] ajouter une pagination
-[] ajouter des tests unitaires
-[] utiliser Redux
+-[x] ajouter une fonctionnalité de tri des résultats
+-[] ajouter une pagination
+-[] ajouter des tests unitaires
+-[] utiliser Redux
 
 ## API
 
 On utilise pour ce test l'API `omdbapi` :
 
-#### Recherche de film par titre 
+### Recherche de film par titre
 
-http://www.omdbapi.com/?apikey=9ddde0b3&type=movie&s=[titre]`
+http://www.omdbapi.com/?apikey=9ddde0b3&type=movie&s=[titre]
 
-#### Recherche de film par id     
+### Recherche de film par id
 
-http://www.omdbapi.com/?apikey=9ddde0b3&i=[IMDbID]`
+http://www.omdbapi.com/?apikey=9ddde0b3&i=[IMDbID]
 
 Documentation complète de l'api : http://www.omdbapi.com/

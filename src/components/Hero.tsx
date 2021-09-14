@@ -52,7 +52,7 @@ const Hero = () => {
             search(title, type);
           }}
         >
-          <Grid container spacing={2} justify="center" alignItems="center">
+          <Grid container spacing={2} justifyContent="center" alignItems="center">
             <Grid item>
               <TextField
                 id="filled-basic"
@@ -62,14 +62,14 @@ const Hero = () => {
               />
             </Grid>
             <Grid item>
-              <FormControl >
+              <FormControl variant="standard">
                 <InputLabel id="demo-simple-select-label">Type</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   value={type}
                   onChange={handleTypeChange}
-                >
+                  variant="standard">
                   <MenuItem value={"movie"}>Movie</MenuItem>
                   <MenuItem value={"series"}>Serie</MenuItem>
                   {/* <MenuItem value={"episode"}>Episode</MenuItem> */}

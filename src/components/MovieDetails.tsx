@@ -1,10 +1,8 @@
 import React from "react";
-import {
-  createStyles,
-  Theme,
-  withStyles,
-  WithStyles,
-} from "@material-ui/core/styles";
+import { Theme } from "@material-ui/core/styles";
+import { WithStyles } from '@material-ui/styles';
+import createStyles from '@material-ui/styles/createStyles';
+import withStyles from '@material-ui/styles/withStyles';
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogTitle from "@material-ui/core/DialogTitle";
@@ -48,7 +46,7 @@ const DialogTitle = withStyles(styles)((props: DialogTitleProps) => {
           aria-label="close"
           className={classes.closeButton}
           onClick={onClose}
-        >
+          size="large">
           <CloseIcon />
         </IconButton>
       ) : null}
@@ -112,7 +110,7 @@ export default function CustomizedDialogs({
           {Title}
         </DialogTitle>
         <DialogContent dividers>
-          <Grid container spacing={2} justify="center" alignItems="center">
+          <Grid container spacing={2} justifyContent="center" alignItems="center">
             <Grid item>
               <Container maxWidth="sm">
                 <img

@@ -8,18 +8,21 @@ Le choix des éléments UI et du style de l'interface est libre. La librairie Ma
 
 * un champ permet de rechercher des films par titre 
 * la liste des résultats contient pour chaque film les informations suivantes :
+
  - [x] le titre ("Title")
  - [x] l'année ("Year)
+
 * au clic sur un film on affiche les détails suivant (dans une pop-in ou une nouvelle page) :
-  -[x] le réalisateur ("Director")
-  -[x] l'intrigue ("Plot")
-  -[x] l'affiche ("Poster")
+
+ - [x] le réalisateur ("Director")
+ - [x] l'intrigue ("Plot")
+ - [x] l'affiche ("Poster")
 
 Bonus :
--[x] ajouter une fonctionnalité de tri des résultats
--[] ajouter une pagination
--[] ajouter des tests unitaires
--[] utiliser Redux
+ - [x] ajouter une fonctionnalité de tri des résultats
+ - [] ajouter une pagination
+ - [] ajouter des tests unitaires
+ - [] utiliser Redux
 
 ## API
 

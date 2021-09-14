@@ -20,9 +20,9 @@ Le choix des éléments UI et du style de l'interface est libre. La librairie Ma
 
 Bonus :
  - [x] ajouter une fonctionnalité de tri des résultats
- - [] ajouter une pagination
- - [] ajouter des tests unitaires
- - [] utiliser Redux
+ - [ ] ajouter une pagination
+ - [ ] ajouter des tests unitaires
+ - [ ] utiliser Redux
 
 ## API
 

@@ -12,6 +12,7 @@ import {
 } from "@material-ui/core";
 import useStyles from "./Hero.style";
 import useStore from "../store/MovieStore";
+import InvalidRequest from "./InvalidRequest";
 
 const Hero = () => {
   const classes = useStyles();
@@ -26,6 +27,8 @@ const Hero = () => {
     console.log("type", event.target.value)
   };
 
+  const responseSuccess = useStore(state => state.responseSuccess)
+  const [openModal, setOpenModal] = React.useState(false);
 
   return (
     <div className={classes.heroContent}>
@@ -51,6 +54,7 @@ const Hero = () => {
           onSubmit={(e) => {
             e.preventDefault();
             console.log("submit")
+            setOpenModal(true);
             search(title, type);
           }}
         >
@@ -93,6 +97,9 @@ const Hero = () => {
           </Grid>
         </form>
       </Container>
+      {responseSuccess === false && openModal &&
+     <InvalidRequest setOpenModal={setOpenModal} openModal={openModal}/>
+    }
     </div>
   );
 };

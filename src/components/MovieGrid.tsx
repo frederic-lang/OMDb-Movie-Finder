@@ -6,20 +6,14 @@ import useStore from "../store/MovieStore"
 
 
 import MovieDetails from './MovieDetails'
-import InvalidRequest from './InvalidRequest'
 
 
 const MovieGrid = () => {
   const classes = useStyles();
   const movies = useStore(state => state.movies)
-  const responseSuccess = useStore(state => state.responseSuccess)
 
   return (
     <Container className={classes.cardGrid} maxWidth="md">
-
-    {responseSuccess === false &&
-     <InvalidRequest />
-    }
 
     <Grid container spacing={4}>
       {movies.map((movie) => (

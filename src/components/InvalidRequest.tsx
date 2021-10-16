@@ -6,17 +6,16 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-export default function AlertDialog() {
-  const [open, setOpen] = React.useState(true);
+export default function AlertDialog({setOpenModal, openModal} ) {
 
   const handleClose = () => {
-    setOpen(false);
+    setOpenModal(false);
   };
 
   return (
     <div>
       <Dialog
-        open={open}
+        open={openModal}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"

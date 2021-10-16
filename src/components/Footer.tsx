@@ -7,7 +7,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="/">
-        Free Movie Finder
+        IMDB Movie Finder
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -23,14 +23,14 @@ const Footer = () => {
       <Typography variant="h6" align="center" gutterBottom>
         End of page
       </Typography>
-      <Typography
+{/*       <Typography
         variant="subtitle1"
         align="center"
         color="textSecondary"
         component="p"
       >
         Something here to give the footer a purpose!
-      </Typography>
+      </Typography> */}
       <Copyright />
     </footer>
   );

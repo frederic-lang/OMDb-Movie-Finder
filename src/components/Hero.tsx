@@ -23,6 +23,7 @@ const Hero = () => {
   };
   const handleTypeChange = (event: any) => {
     setType(event.target.value);
+    console.log("type", event.target.value)
   };
 
 
@@ -49,6 +50,7 @@ const Hero = () => {
           autoComplete="off"
           onSubmit={(e) => {
             e.preventDefault();
+            console.log("submit")
             search(title, type);
           }}
         >
@@ -78,11 +80,12 @@ const Hero = () => {
             </Grid>
             <Grid item>
               <Button
+                type="submit"
                 variant="contained"
                 color="primary"
-                onClick={() => {
+/*                 onClick={() => {
                   search(title, type);
-                }}
+                }} */
               >
                 Search
               </Button>

@@ -13,12 +13,15 @@ import {
 import useStyles from "./Hero.style";
 import useStore from "../store/MovieStore";
 import InvalidRequest from "./InvalidRequest";
+import NoResults from "./NoResults";
 
 const Hero = () => {
   const classes = useStyles();
   const search = useStore((state) => state.search);
   const [title, setTitle] = React.useState("");
   const [type, setType] = React.useState("movie")
+  const [openModalEmpty, setOpenModalEmpty] = React.useState(false);
+  const [openModalNoR, setOpenModalNoR] = React.useState(false);
   const handleChange = (event: any) => {
     setTitle(event.target.value);
   };
@@ -28,7 +31,6 @@ const Hero = () => {
   };
 
   const responseSuccess = useStore(state => state.responseSuccess)
-  const [openModal, setOpenModal] = React.useState(false);
 
   return (
     <div className={classes.heroContent}>
@@ -54,7 +56,8 @@ const Hero = () => {
           onSubmit={(e) => {
             e.preventDefault();
             console.log("submit")
-            setOpenModal(true);
+            if(title==="") setOpenModalEmpty(true);
+            else setOpenModalNoR(true);
             search(title, type);
           }}
         >
@@ -87,9 +90,6 @@ const Hero = () => {
                 type="submit"
                 variant="contained"
                 color="primary"
-/*                 onClick={() => {
-                  search(title, type);
-                }} */
               >
                 Search
               </Button>
@@ -97,9 +97,12 @@ const Hero = () => {
           </Grid>
         </form>
       </Container>
-      {responseSuccess === false && openModal &&
-     <InvalidRequest setOpenModal={setOpenModal} openModal={openModal}/>
-    }
+      {openModalEmpty &&
+      <InvalidRequest setOpenModal={setOpenModalEmpty} openModal={openModalEmpty}/>
+      }
+      {responseSuccess===false && openModalNoR &&
+      <NoResults setOpenModal={setOpenModalNoR} openModal={openModalNoR}/>
+      }
     </div>
   );
 };

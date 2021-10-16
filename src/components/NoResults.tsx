@@ -6,7 +6,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-export default function InvalidRequest({setOpenModal, openModal} : {setOpenModal:(_:boolean)=>void, openModal:boolean} ) {
+export default function NoResults({setOpenModal, openModal} : {setOpenModal:(_:boolean)=>void, openModal:boolean} ) {
 
   const handleClose = () => {
     setOpenModal(false);
@@ -20,15 +20,15 @@ export default function InvalidRequest({setOpenModal, openModal} : {setOpenModal
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Invalid Request !"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">{"Blank !"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            You cannot make request with empty title
+            There is no results for your entry..
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary" autoFocus>
-            I got it
+            Try with another title
           </Button>
         </DialogActions>
       </Dialog>

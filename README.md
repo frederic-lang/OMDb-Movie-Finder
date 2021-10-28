@@ -4,7 +4,7 @@ The Internet Movie Database is a open-source repository containing informations 
 
 **[Preview Live Example](https://imdb-explore.vercel.app/)**
 
-## Fonctionalitées
+## Fonctionalities
 
 * A field let the user type its input
 * A results list contains for each movie the following results :

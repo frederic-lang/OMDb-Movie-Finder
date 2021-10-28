@@ -9,7 +9,7 @@ const FreeAppBar = () => {
     <AppBar position="static">
       <Toolbar>
         <IconButton edge="start" color="inherit" aria-label="menu" size="large">
-          <img src="/assets/logo.png" className={classes.logo} alt="logo" />
+          <img src="/assets/omdb.png" className={classes.logo} alt="logo" />
         </IconButton>
         <Typography variant="h4">Movie Finder</Typography>
       </Toolbar>

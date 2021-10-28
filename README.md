@@ -1,6 +1,6 @@
-# IMDB Movie Finder 📽
+# OMDb Movie Finder 📽
 
-The Internet Movie Database is a open-source repository containing informations about movies from any time. This project aims to provide a free movie finder trough this database
+The Open-Source Movie Database is a open-source alternative to the Internet Movie Database containing various informations about movies. This project aims to provide a free movie finder trough this database
 
 **[Preview Live Example](https://imdb-explore.vercel.app/)**
 

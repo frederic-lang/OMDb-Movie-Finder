@@ -3,7 +3,6 @@ import {
   Typography,
   Container,
   Grid,
-  Button,
   TextField,
   FormControl,
   InputLabel,
@@ -14,6 +13,7 @@ import useStyles from "./Hero.style";
 import useStore from "../store/MovieStore";
 import InvalidRequest from "./InvalidRequest";
 import NoResults from "./NoResults";
+import {Button} from '@mui/material';
 
 const Hero = () => {
   const classes = useStyles();
@@ -56,7 +56,7 @@ const Hero = () => {
             console.log("submit")
             if(title==="") setOpenModalEmpty(true);
             else setOpenModalNoR(true);
-            search(title, type);
+            search(title, type, 1);
           }}
         >
           <Grid container spacing={2} justifyContent="center" alignItems="center">

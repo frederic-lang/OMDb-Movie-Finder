@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Container, Card, CardMedia, CardContent, CardActions, Grid } from "@material-ui/core";
-
+import {Pagination} from '@mui/material';
 import useStyles from "./MovieGrid.style";
 import useStore from "../store/MovieStore"
 
@@ -9,8 +9,19 @@ import MovieDetails from './MovieDetails'
 
 
 const MovieGrid = () => {
+  const [page, setPage] = React.useState(1);
+
   const classes = useStyles();
   const movies = useStore(state => state.movies)
+  const totalResults = useStore(state => state.totalResults)
+  const search = useStore((state) => state.search);
+  const title = useStore((state) => state.title);
+  const type = useStore((state) => state.type);
+
+  const handleChange = (_, value) => {
+    setPage(value);
+    search(title, type, page);
+  };
 
   return (
     <Container className={classes.cardGrid} maxWidth="md">
@@ -39,7 +50,14 @@ const MovieGrid = () => {
         </Grid>
       ))}
     </Grid>
-    {/* <Pagination count={10} variant="outlined" shape="rounded" /> */}
+    { totalResults > 0 &&
+    <Pagination
+        className={classes.pagination}
+        count={Math.floor(totalResults/10) +1}
+        page={page}
+        onChange={handleChange}
+        />
+    }
   </Container>
   );
 };

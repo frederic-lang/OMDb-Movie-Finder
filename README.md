@@ -1,39 +1,29 @@
-# Free test technique
+# IMDB Movie Finder 📽
 
-Le but est de développer une interface permettant de rechercher des films et d'en afficher les informations.
+The Internet Movie Database is a open-source repository containing informations about movies from any time. This project aims to provide a free movie finder trough this database
 
-Le choix des éléments UI et du style de l'interface est libre. La librairie Material UI est installée de base mais peut ne pas être utilisée.
+**[Preview Live Example](https://imdb-explore.vercel.app/)**
 
 ## Fonctionalitées
 
-* un champ permet de rechercher des films par titre 
-* la liste des résultats contient pour chaque film les informations suivantes :
+* A field let the user type its input
+* A results list contains for each movie the following results :
 
- - [x] le titre ("Title")
- - [x] l'année ("Year)
+ - [x] the title
+ - [x] the year
 
-* au clic sur un film on affiche les détails suivant (dans une pop-in ou une nouvelle page) :
+* At click on a movie, the following details are displayed :
 
- - [x] le réalisateur ("Director")
- - [x] l'intrigue ("Plot")
- - [x] l'affiche ("Poster")
+ - [x] the director
+ - [x] the plot
+ - [x] the poster
 
-Bonus :
- - [x] ajouter une fonctionnalité de tri des résultats
- - [ ] ajouter une pagination
- - [ ] ajouter des tests unitaires
- - [ ] utiliser Redux
+
+* results may be filtered by type (movie or serie)
+
 
 ## API
 
-On utilise pour ce test l'API `omdbapi` :
+underneath the API `omdbapi` is used.
 
-### Recherche de film par titre
-
-http://www.omdbapi.com/?apikey=9ddde0b3&type=movie&s=[titre]
-
-### Recherche de film par id
-
-http://www.omdbapi.com/?apikey=9ddde0b3&i=[IMDbID]
-
-Documentation complète de l'api : http://www.omdbapi.com/
+complete documentation of the api : http://www.omdbapi.com/

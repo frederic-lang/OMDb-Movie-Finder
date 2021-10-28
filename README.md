@@ -2,7 +2,7 @@
 
 The Open-Source Movie Database is a open-source alternative to the Internet Movie Database containing various informations about movies. This project aims to provide a free movie finder trough this database
 
-**[Preview Live Example](https://imdb-explore.vercel.app/)**
+**[Preview Live Example](https://omdb-explore.vercel.app/)**
 
 ## Functionalities
 
